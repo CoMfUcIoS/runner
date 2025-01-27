@@ -1,3 +1,4 @@
+//go:build riemann
 // +build riemann
 
 // Copyright 2016 Iron.io
@@ -20,8 +21,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/sirupsen/logrus"
 	"github.com/amir/raidman"
+	"github.com/sirupsen/logrus"
 )
 
 type RiemannClient struct {

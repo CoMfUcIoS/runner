@@ -1,3 +1,4 @@
+//go:build !windows && !nacl && !plan9
 // +build !windows,!nacl,!plan9
 
 package common
@@ -7,7 +8,6 @@ import (
 	"net/url"
 
 	"github.com/sirupsen/logrus"
-	"github.com/sirupsen/logrus/hooks/syslog"
 )
 
 func NewSyslogHook(url *url.URL, prefix string) error {

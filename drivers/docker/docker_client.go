@@ -1,3 +1,4 @@
+//go:build go1.7
 // +build go1.7
 
 // Copyright 2016 Iron.io
@@ -26,9 +27,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/comfucios/runner/common"
 	"github.com/sirupsen/logrus"
-	"github.com/fsouza/go-dockerclient"
-	"github.com/iron-io/runner/common"
 )
 
 const (

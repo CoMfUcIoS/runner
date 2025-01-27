@@ -67,7 +67,7 @@ imports:
   version: 47ecf50fd8d4fba87593c00ca0959029c7d6b95c
   subpackages:
   - registry
-- name: github.com/iron-io/runner
+- name: github.com/comfucios/runner
   version: 9fe11b16791641c40a0729de8bac7ba28a507145
   subpackages:
   - common
@@ -90,7 +90,7 @@ imports:
   version: 079817cc26ec5292ac375bb9f47f373d33574949
   subpackages:
   - libcontainer/user
-- name: github.com/Sirupsen/logrus
+- name: github.com/sirupsen/logrus
   version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
   subpackages:
   - hooks/syslog

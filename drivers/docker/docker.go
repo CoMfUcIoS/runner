@@ -28,13 +28,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sirupsen/logrus"
+	"github.com/comfucios/runner/common"
+	"github.com/comfucios/runner/common/stats"
+	"github.com/comfucios/runner/drivers"
 	manifest "github.com/docker/distribution/manifest/schema1"
-	"github.com/fsouza/go-dockerclient"
 	"github.com/heroku/docker-registry-client/registry"
-	"github.com/iron-io/runner/common"
-	"github.com/iron-io/runner/common/stats"
-	"github.com/iron-io/runner/drivers"
+	"github.com/sirupsen/logrus"
 )
 
 const hubURL = "https://registry.hub.docker.com"
@@ -212,9 +211,9 @@ func registryForConfig(config docker.AuthConfiguration, reg string) (*registry.R
 		return nil, err
 	}
 
-        if strings.Contains(reg,"dkr.ecr") {
-                reg = config.ServerAddress
-        }
+	if strings.Contains(reg, "dkr.ecr") {
+		reg = config.ServerAddress
+	}
 
 	// Use this instead of registry.New to avoid the Ping().
 	transport := registry.WrapTransport(registryClient.Transport, reg, config.Username, config.Password)
