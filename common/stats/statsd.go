@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cactus/go-statsd-client/statsd"
+	"github.com/cactus/go-statsd-client/v5/statsd"
 )
 
 type StatsdConfig struct {
